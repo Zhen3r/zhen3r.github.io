@@ -1,0 +1,27 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+nav{
+    background-color: rgb(21, 28, 46);
+    top: 0;
+    z-index:1020; 
+}
+
+body section{
+    height: 75vh;
+}
+  
+.p5{
+    background-color: rgb(21, 28, 46);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.my-card-container > div{
+    @extend .row, .row-cols-1, .row-cols-sm-2, 
+            .row-cols-md-3, .row-cols-lg-4, .g-4,
+            .mb-5 ;
+}
+.my-card-container > h3{
+    @extend .mb-3;
+}
