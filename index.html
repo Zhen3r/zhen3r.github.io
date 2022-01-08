@@ -7,6 +7,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700" rel="stylesheet">
+
     <!-- Bootstrap CSS v5.0.2 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -15,146 +17,254 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- (Optional) Use CSS or JS implementation -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
         integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <link rel="stylesheet" href="./res/style.css">
-    <style></style>
 </head>
 
-<body>
-    <nav class="navbar navbar-dark position-fixed w-100 d-flex">
+<body class="bg-light">
+    <nav class="navbar navbar-dark position-fixed w-100">
         <!-- Navbar content -->
-        <a href="#" class="fw-lighter fs-5 mx-3 my-2 text-light text-decoration-none">
-            <b class="fw-normal">ZHENZHAO</b>XU</a>
+        <div class="container d-flex">
+            <a href="#" class="fw-lighter fs-5 my-2 text-light name text-decoration-none">
+                <b class="fw-normal">ZHENZHAO</b>XU</a>
+            <div class="nav-btn">
+                <a class="activated-nav" href="#con1">WEB</a>
+                <a href="#con2">R</a>
+                <a href="#con3">PYTHON</a>
+                <a href="#con4">OTHER</a>
+                <a href="#"><i class="fas fa-arrow-up fs-5"></i></a>
+            </div>
+        </div>
+
     </nav>
 
     <section class="text-center d-flex position-relative">
         <div class="p5"></div>
         <div class="col-lg-6 col-md-8 m-auto">
-            <h1 class="fw-lighter text-light py-3"><b class="fw-normal">ZHENZHAO</b>XU</h1>
+            <h1 class="fw-lighter text-light py-3 name"><b class="fw-normal">ZHENZHAO</b>XU</h1>
 
             <p class="lead text-white-50 pt-3">A data analyst with knowledge of statistics, skills of visualization, and
                 passion for problem solving.</p>
             <p class="lead text-white-50 pb-3">Master of Urban Spatial Analytics @ University of Pennsylvania</p>
-            <p class="text-muted text-white-50 fs-3">
-                <a href="#" class="text-reset px-1"> <i class="fas fa-envelope"></i></a>
-                <a href="#" class="text-reset px-1"> <i class="fab fa-linkedin"></i></a>
-                <a href="#" class="text-reset px-1"> <i class="fab fa-github-square"></i></a>
+            <p class="text-muted text-white-50 fs-3 contacts">
+                <a href="mailto:zhenzhao@upenn.edu" class="text-reset px-1"> <i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/zhenzhao-xu/" class="text-reset px-1"> <i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Zhen3r" class="text-reset px-1"> <i class="fab fa-github-square"></i></a>
             </p>
         </div>
     </section>
 
-    <div class="album py-5 bg-light">
+    <div class="album py-1 bg-light">
         <div class="container my-card-container">
-            <h3>1. Predictive Analysis & Modeling with R</h3>
+
+            <h3 id="con1">Web Applications with JavaScript</h3>
+            <hr>
             <div>
                 <div class="col">
-                    <div class="card shadow-sm">
-                        <img src="img/python-permit.png" class="img-thumbnail" alt="">
-
+                    <a href="http://550.orifish.tech" class="card">
+                        <img src="img/web-550.png">
                         <div class="card-body">
-                            <h6 class="card-title fw-bold">Parking Demand Prediction in SF</h6>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                </div>
+                            <h6 class="fw-normal">How do streets affect our safety?</h6>
+                            <p class="fw-light">
+                                Using street view analysis to explore the relationships between "street space" and
+                                "safety". An image segmentation method SegNet is applied to analyzing the street view
+                                images from Bing.
+                                <br>
+                                <u id='link-550'><i class="fab fa-github"></i> Github Repo</u>
+                            </p>
+                            <div>
+                                <span>ResNet (Image Segmentation)</span>
+                                <span>Clustering Analysis</span>
+                                <span>Correlation</span>
+                                <span>Python</span>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
+                <div class="col">
+                    <a href="http://509.orifish.tech" class="card">
+                        <img src="img/web-509.gif">
+                        <div class="card-body">
+                            <h6>Where Should Philly's Next Park Be?</h6>
+                            <p>
+                                A web application to help Philadelphia Parks and Recreation Department to choose new
+                                green space locations. An ETL pipeline is also conducted including data cleaning,
+                                exploratory analysis, model building in SQL+Python based on Airflow.
+                                <br>
+                                <u id='link-509'><i class="fab fa-github"></i> Github Repo</u>
+                                <br>
+                                <u id='link-509-2'><i class="fas fa-paper-plane"></i> Airflow Panel (account:guest,
+                                    pwd:123)</u>
+                            </p>
+                            <div>
+                                <span>ETL</span>
+                                <span>Airflow</span>
+                                <span>Data Pipeline</span>
+                                <span>PostgreSQL</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
             </div>
 
-            <h3>1. Prictive Analysis</h3>
+            <h3 id="con2">Predictive Analysis & Modeling with R</h3>
+            <hr>
             <div>
                 <div class="col">
-                    <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
-                                dy=".3em">Thumbnail</text>
-                        </svg>
-
+                    <a href="works/R-Parking.html" class="card">
+                        <img src="img/r-parking.gif">
                         <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural
-                                lead-in to additional content. This content is a little bit longer.card with supporting
-                                text below as a natural
-                                lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                </div>
-                                <small class="text-muted">9 mins</small>
+                            <h6>Parking Demand Prediction in San Francisco</h6>
+                            <p>A demand-responsive parking system based on the prediction of future parking demand at
+                                specific time and location.</p>
+                            <div>
+                                <span>OLS</span>
+                                <span>Predictive Model</span>
+                                <span>Temporal Process</span>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col">
-                    <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
-                                dy=".3em">Thumbnail</text>
-                        </svg>
-
+                    <a href="works/R-Logit.html" class="card">
+                        <img src="img/r-logit.png">
                         <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural
-                                lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                </div>
-                                <small class="text-muted">9 mins</small>
+                            <h6>Cost Benefit Optimization for Home Repair Tax Credit Program</h6>
+                            <p>Using logistic regression to find a more effective strategy to select target groups, and
+                                improving the use of limited campaign resources by cost/benefit analysis.</p>
+                            <div>
+                                <span>Logistic Regression</span>
+                                <span>ROC</span>
+                                <span>Cost/Benefit</span>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col">
-                    <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                            preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
-                                dy=".3em">Thumbnail</text>
-                        </svg>
-
+                    <a href="works/R-TheftRisk.html" class="card">
+                        <img src="img/r-theftrisk.png">
                         <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural
-                                lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                </div>
-                                <small class="text-muted">9 mins</small>
+                            <h6>Predicting Theft Risk in San Francisco</h6>
+                            <p>A geospatial risk model is built to "borrow" the experience from the past theft crime
+                                data and forecast latent risk of thefts. Geospatial risk and protective factors, such as
+                                graffiti or abandoned buildings are also taken into account.</p>
+                            <div>
+                                <span>Spatial Exposure</span>
+                                <span>Risk Model</SPan>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
+                <!-- <div class="col">
+                    <a href="works/R-TOD.html" class="card">
+                        <img src="img/r-tod.png">
+                        <div class="card-body">
+                            <h6>TOD Analysis in Chicago, IL</h6>
+                            <p>TOD (transit-oriented development) analysis based on the rent, transportation, and crime
+                                in Chicago.</p>
+                            <div>
+                                <span>R</span>
+                                <span>ggplot</span>
+                            </div>
+                        </div>
+                    </a>
+                </div> -->
             </div>
+            <h3 id="con3">Data Analysis & Visualization with Python</h3>
+            <hr>
+            <div>
+                <div class="col">
+                    <a href="works/python-yelp" class="card">
+                        <img src="img/python-yelp.png">
+                        <div class="card-body">
+                            <h6>Sentiment Analysis of Yelp Reviews</h6>
+                            <p>Exploring restaurant review data available through the Yelp Dataset Challenge. In this
+                                project, sentiment analysis and correlations analysis is proformed.</p>
+                            <div>
+                                <span>NLP</span>
+                                <span>Matplotlib</span>
+                                <span>pandas</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="works/python-permits" class="card">
+                        <img src="img/python-permit.png">
+                        <div class="card-body">
+                            <h6>Building and Zoning Permits in Philadelphia</h6>
+                            <p>Philadelphia's real estate industry underwent a huge change in 2020, this project
+                                visualizes the change in building permits and analyzes its relationship with land market
+                                value.</p>
+                            <div>
+                                <span>Altair</span>
+                                <span>Seaborn</span>
+                                <span>pandas</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="works/python-evictions" class="card">
+                        <img src="img/python-evictions.png">
+                        <div class="card-body">
+                            <h6>Evictions and Code Violations in Philadelphia</h6>
+                            <p>Spatial trends of evictions in Philadelphia is analyzed using data from the Eviction Lab
+                                and building code violations using data from OpenDataPhilly.
+                            </p>
+                            <div>
+                                <span>hvPlot</span>
+                                <span>pandas</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            <h3 id="con4">Other Works</h3>
+            <hr>
+            <div>
+                <div class="col">
+                    <a href="works/urban-design.pdf" class="card">
+                        <img src="img/urban-design.png">
+                        <div class="card-body">
+                            <h6>Urban Design Project in Shanghai, China</h6>
+                            <p>"Breaking the Barrier" - Revival of Fuxing Island in Shanghai.</p>
+                            <div>
+                                <span>PhotoShop</span>
+                                <span>InDesign</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="http://orifish.tech/p5/hair/" class="card">
+                        <img src="img/p5js.png">
+                        <div class="card-body">
+                            <h6>Generative Artin P5.js</h6>
+                            <p>Partical Effect - "The Flow"</p>
+                            <div>
+                                <span>JS</span>
+                                <span>p5.js</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+            </div>
+
         </div>
     </div>
 
 
-    <footer class="text-muted py-5">
-        <div class="container">
-            <p class="float-end mb-1">
-                <a href="#">Back to top</a>
-            </p>
-            <p class="mb-1">Album example is © Bootstrap, but please download and customize it for yourself!</p>
-            <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a
-                    href="/docs/5.1/getting-started/introduction/">getting started guide</a>.</p>
-        </div>
+    <footer class="text-black-50 py-2 bg-light" style="margin-top: 6rem;font-size:10px;">
+        <p class="mb-1 text-center">© ZhenzhaoXu's Portfolio. All rights reserved.</p>
     </footer>
 
     <!-- Bootstrap JavaScript Libraries -->

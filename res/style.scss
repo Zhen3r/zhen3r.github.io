@@ -1,6 +1,11 @@
+$font-family-base: 'Open Sans', sans-serif; // add this line first before importing bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+$dark: rgb(21, 28, 46);
+
+
 nav{
-    background-color: rgb(21, 28, 46);
+    background-color: $dark;
     top: 0;
     z-index:1020; 
 }
@@ -10,7 +15,7 @@ body section{
 }
   
 .p5{
-    background-color: rgb(21, 28, 46);
+    background-color: $dark;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -18,10 +23,90 @@ body section{
 }
 
 .my-card-container > div{
-    @extend .row, .row-cols-1, .row-cols-sm-2, 
-            .row-cols-md-3, .row-cols-lg-4, .g-4,
+    @extend .row, .row-cols-1, .row-cols-sm-1, 
+            .row-cols-md-2, .row-cols-lg-3, .g-4,
             .mb-5 ;
 }
 .my-card-container > h3{
-    @extend .mb-3;
+    @extend .text-center, .fw-bold;
+    margin-top: 5rem;
+    color: $dark;
+
+}
+
+hr{
+    margin-top: 0.3rem;
+}
+
+a{
+    text-decoration: none;
+    // @extend .text-dark;
+    color: $dark;
+    &:hover{
+        color: $dark; 
+    }
+}
+
+.badges{
+    @extend .d-flex;
+    flex-wrap: wrap;
+    margin: -0.25rem;
+    > span{
+        @extend .badge, .mx-1, .mb-1, .fw-normal;
+        background-color: $gray-600 ;
+    }
+}
+
+
+.card{
+    @extend .shadow-sm,.p-1;
+    transition: box-shadow 0.3s ease-in-out;
+    > img{
+        object-fit: cover;
+        height: 250px;
+    }
+    > div{
+        @extend .card-body;
+        > h6{
+            @extend .card-title, .fw-bold;
+            &:hover{
+                text-decoration: underline !important;
+            }
+        }
+        > p{
+            @extend .card-text, .fw-light;
+            > u:hover{@extend .fw-normal;}
+        }
+        > div{@extend .badges;}
+    }
+    &:hover{
+        @extend .shadow-lg;
+    }
+}
+
+.name{
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.contacts{
+    > a:hover{
+        @extend .text-light;
+    }
+}
+
+.activated-nav {
+    @extend .rounded;
+    // border: solid 2px white;
+    background-color: $light;
+    color: $dark !important;
+    
+}
+
+.nav-btn{
+    > a{
+        @extend .px-2;
+        display: inline;
+        color: $light;
+        transition: all 0.3s ease-in-out;
+    }
 }

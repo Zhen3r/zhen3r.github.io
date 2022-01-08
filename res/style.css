@@ -50,7 +50,7 @@
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  --bs-body-font-family: var(--bs-font-sans-serif);
+  --bs-body-font-family: Open Sans, sans-serif;
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
@@ -966,13 +966,13 @@ progress {
             flex: 0 0 auto;
     width: auto;
   }
-  .row-cols-sm-1 > * {
+  .row-cols-sm-1 > *, .my-card-container > div > * {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
     width: 100%;
   }
-  .row-cols-sm-2 > *, .my-card-container > div > * {
+  .row-cols-sm-2 > * {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
@@ -1184,13 +1184,13 @@ progress {
             flex: 0 0 auto;
     width: 100%;
   }
-  .row-cols-md-2 > * {
+  .row-cols-md-2 > *, .my-card-container > div > * {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
     width: 50%;
   }
-  .row-cols-md-3 > *, .my-card-container > div > * {
+  .row-cols-md-3 > * {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
@@ -1402,13 +1402,13 @@ progress {
             flex: 0 0 auto;
     width: 50%;
   }
-  .row-cols-lg-3 > * {
+  .row-cols-lg-3 > *, .my-card-container > div > * {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
     width: 33.33333%;
   }
-  .row-cols-lg-4 > *, .my-card-container > div > * {
+  .row-cols-lg-4 > * {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
@@ -5146,14 +5146,14 @@ fieldset:disabled .btn {
   border-top: 0;
 }
 
-.card-body {
+.card-body, .card > div {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   padding: 1rem 1rem;
 }
 
-.card-title {
+.card-title, .card > div > h6, .card > div > .h6 {
   margin-bottom: 0.5rem;
 }
 
@@ -5162,7 +5162,7 @@ fieldset:disabled .btn {
   margin-bottom: 0;
 }
 
-.card-text:last-child {
+.card-text:last-child, .card > div > p:last-child {
   margin-bottom: 0;
 }
 
@@ -5555,7 +5555,7 @@ fieldset:disabled .btn {
   border-bottom-right-radius: 0.2rem;
 }
 
-.badge {
+.badge, .badges > span, .card > div > div > span {
   display: inline-block;
   padding: 0.35em 0.65em;
   font-size: 0.75em;
@@ -5568,11 +5568,11 @@ fieldset:disabled .btn {
   border-radius: 0.25rem;
 }
 
-.badge:empty {
+.badge:empty, .badges > span:empty, .card > div > div > span:empty {
   display: none;
 }
 
-.btn .badge {
+.btn .badge, .btn .badges > span, .btn .card > div > div > span {
   position: relative;
   top: -1px;
 }
@@ -6584,7 +6584,7 @@ fieldset:disabled .btn {
   z-index: 1080;
   display: block;
   margin: 0;
-  font-family: var(--bs-font-sans-serif);
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -6697,7 +6697,7 @@ fieldset:disabled .btn {
   z-index: 1070;
   display: block;
   max-width: 276px;
-  font-family: var(--bs-font-sans-serif);
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -7695,7 +7695,7 @@ fieldset:disabled .btn {
   display: table-cell !important;
 }
 
-.d-flex {
+.d-flex, .badges, .card > div > div {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -7716,12 +7716,12 @@ fieldset:disabled .btn {
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 
-.shadow-sm {
+.shadow-sm, .card {
   -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
           box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
 }
 
-.shadow-lg {
+.shadow-lg, .card:hover {
   -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
           box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
 }
@@ -8279,7 +8279,7 @@ fieldset:disabled .btn {
   margin-left: 0 !important;
 }
 
-.mx-1 {
+.mx-1, .badges > span, .card > div > div > span {
   margin-right: 0.25rem !important;
   margin-left: 0.25rem !important;
 }
@@ -8404,7 +8404,7 @@ fieldset:disabled .btn {
   margin-bottom: 0 !important;
 }
 
-.mb-1 {
+.mb-1, .badges > span, .card > div > div > span {
   margin-bottom: 0.25rem !important;
 }
 
@@ -8412,7 +8412,7 @@ fieldset:disabled .btn {
   margin-bottom: 0.5rem !important;
 }
 
-.mb-3, .my-card-container > h3, .my-card-container > .h3 {
+.mb-3 {
   margin-bottom: 1rem !important;
 }
 
@@ -8460,7 +8460,7 @@ fieldset:disabled .btn {
   padding: 0 !important;
 }
 
-.p-1 {
+.p-1, .card {
   padding: 0.25rem !important;
 }
 
@@ -8490,7 +8490,7 @@ fieldset:disabled .btn {
   padding-left: 0.25rem !important;
 }
 
-.px-2 {
+.px-2, .nav-btn > a {
   padding-right: 0.5rem !important;
   padding-left: 0.5rem !important;
 }
@@ -8672,7 +8672,7 @@ fieldset:disabled .btn {
   font-style: normal !important;
 }
 
-.fw-light {
+.fw-light, .card > div > p {
   font-weight: 300 !important;
 }
 
@@ -8680,11 +8680,11 @@ fieldset:disabled .btn {
   font-weight: lighter !important;
 }
 
-.fw-normal {
+.fw-normal, .badges > span, .card > div > div > span, .card > div > p > u:hover {
   font-weight: 400 !important;
 }
 
-.fw-bold {
+.fw-bold, .my-card-container > h3, .my-card-container > .h3, .card > div > h6, .card > div > .h6 {
   font-weight: 700 !important;
 }
 
@@ -8716,7 +8716,7 @@ fieldset:disabled .btn {
   text-align: right !important;
 }
 
-.text-center {
+.text-center, .my-card-container > h3, .my-card-container > .h3 {
   text-align: center !important;
 }
 
@@ -8789,7 +8789,7 @@ fieldset:disabled .btn {
   color: rgba(var(--bs-danger-rgb), var(--bs-text-opacity)) !important;
 }
 
-.text-light {
+.text-light, .contacts > a:hover {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-light-rgb), var(--bs-text-opacity)) !important;
 }
@@ -8963,7 +8963,7 @@ fieldset:disabled .btn {
   pointer-events: auto !important;
 }
 
-.rounded {
+.rounded, .activated-nav {
   border-radius: 0.25rem !important;
 }
 
@@ -11973,5 +11973,65 @@ body section {
   height: 100%;
   width: 100%;
   z-index: -1;
+}
+
+.my-card-container > h3, .my-card-container > .h3 {
+  margin-top: 5rem;
+}
+
+hr {
+  margin-top: 0.3rem;
+}
+
+a {
+  text-decoration: none;
+  color: #151c2e;
+}
+
+a:hover {
+  color: #151c2e;
+}
+
+.badges, .card > div > div {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: -0.25rem;
+}
+
+.badges > span, .card > div > div > span {
+  background-color: #6c757d;
+}
+
+.card {
+  -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+
+.card > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 250px;
+}
+
+.card > div > h6:hover, .card > div > .h6:hover {
+  text-decoration: underline !important;
+}
+
+.name {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.activated-nav {
+  background-color: #f8f9fa;
+  color: #151c2e !important;
+}
+
+.nav-btn > a {
+  display: inline;
+  color: #f8f9fa;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 /*# sourceMappingURL=style.css.map */
