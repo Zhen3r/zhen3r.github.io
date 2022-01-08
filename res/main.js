@@ -2,7 +2,15 @@
 
 let scrollDest = [];
 $('.my-card-container>h3').each(function (i, x) {
-    scrollDest.push($(x).position().top + window.innerHeight * 0.7)
+    scrollDest.push($(x).position().top)
+})
+
+$('.nav-btn a').each(function (i, x) {
+    if (i >= scrollDest.lendth) { return }
+    $(x).on('click', () => {
+        $(window).scrollTop(scrollDest[i]);
+    })
+
 })
 
 // show nav bar while scrolling
@@ -12,17 +20,18 @@ $(document).on('scroll', (_) => {
         scrollPct = scrolly / winHeight;
     let opacity = (scrollPct - 0.2) / 0.4;
     $('nav').css('opacity', opacity);
+
     let scrollNow = scrollDest.length - 1;
     for (let i = 0; i < scrollDest.length; i++) {
         const d = scrollDest[i];
-        if (scrolly <= d) {
+        if (scrolly <= d + window.innerHeight * 0.7) {
             scrollNow = i
             break
         }
     }
     navBtn = $(".nav-btn a")
     navBtn.removeClass("activated-nav")
-    console.log(navBtn[scrollNow], scrollNow)
+    // console.log(navBtn[scrollNow], scrollNow)
     $(navBtn[scrollNow]).toggleClass("activated-nav")
 
 })
