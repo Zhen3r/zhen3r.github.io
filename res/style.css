@@ -12037,4 +12037,12 @@ a:hover {
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
+
+footer {
+  margin-top: 3rem;
+  padding-bottom: .2rem;
+  background-color: #151c2e;
+  padding-top: 3rem;
+  text-align: center;
+}
 /*# sourceMappingURL=style.css.map */
