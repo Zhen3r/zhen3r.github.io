@@ -11965,7 +11965,7 @@ nav {
 }
 
 body section {
-  height: 80vh;
+  min-height: 80vh;
   background-color: #151c2e;
 }
 
